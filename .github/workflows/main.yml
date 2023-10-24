@@ -16,7 +16,13 @@ jobs:
     - name: Set up Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '2.x' # You can specify a Flutter version
+        flutter-version: 'latest' # Use the latest Flutter version
+
+    - name: Upgrade Flutter
+      run: flutter upgrade
+
+    - name: Set Dart SDK version constraint
+      run: echo "environment:\n  sdk: '>=3.0.3 <4.0.0'" >> pubspec.yaml
 
     - name: Get dependencies
       run: flutter pub get
