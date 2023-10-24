@@ -21,9 +21,6 @@ jobs:
     - name: Upgrade Flutter
       run: flutter upgrade
 
-    - name: Set Dart SDK version constraint
-      run: echo "environment:\n  sdk: '>=3.0.3 <4.0.0'" >> pubspec.yaml
-
     - name: Get dependencies
       run: flutter pub get
 
